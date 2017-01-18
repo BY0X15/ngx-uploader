@@ -93,7 +93,7 @@ export class NgUploaderService {
     };
 
     xhr.onreadystatechange = () => {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.readyState === 4) { // 4 - XHR.DONE
         uploadingFile.onFinished(
             xhr.status,
             xhr.statusText,
